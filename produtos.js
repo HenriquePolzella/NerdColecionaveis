@@ -1,0 +1,16 @@
+const products=[
+  {universe:'pokemon',type:'CARTA AVULSA',name:'Charmander',description:'Encontre sua próxima carta favorita',image:'assets/charmander.png',price:null},
+  {universe:'pokemon',type:'FUNKO POP! GAMES',name:'Squirtle #504',description:'Edição colecionável',image:'assets/funko-squirtle.png',price:'R$ 199,90'},
+  {universe:'pokemon',type:'CARTA RARA',name:'Charizard ex PSA 10',description:'Special Illustration Rare',image:'assets/universe-pokemon.png',price:'R$ 2.499,90',placeholder:true},
+  {universe:'naruto',type:'FUNKO POP! ANIMATION',name:'Naruto Uzumaki',description:'Edição exclusiva',image:'assets/universe-naruto.png',price:'R$ 199,90',placeholder:true},
+  {universe:'naruto',type:'ACTION FIGURE',name:'Kakashi Hatake',description:'Figura colecionável',image:'assets/universe-naruto.png',price:'R$ 329,90',placeholder:true},
+  {universe:'naruto',type:'MANGÁ',name:'Naruto Gold',description:'Edição para colecionadores',image:'assets/universe-naruto.png',price:'R$ 49,90',placeholder:true},
+  {universe:'one-piece',type:'ACTION FIGURE',name:'Monkey D. Luffy',description:'Figura colecionável',image:'assets/universe-one-piece.png',price:'R$ 349,90',placeholder:true},
+  {universe:'one-piece',type:'FUNKO POP!',name:'Roronoa Zoro',description:'Edição especial',image:'assets/universe-one-piece.png',price:'R$ 189,90',placeholder:true},
+  {universe:'one-piece',type:'TCG',name:'One Piece Card Game',description:'Booster para sua coleção',image:'assets/universe-one-piece.png',price:'R$ 39,90',placeholder:true},
+  {universe:'dragon-ball',type:'ACTION FIGURE',name:'Goku Ultra Instinct',description:'SH Figuarts',image:'assets/action-figure-cutout.png',price:'R$ 359,90'},
+  {universe:'dragon-ball',type:'ACTION FIGURE',name:'Vegeta Super Saiyajin',description:'Figura colecionável',image:'assets/universe-dragon-ball.png',price:'R$ 339,90',placeholder:true},
+  {universe:'dragon-ball',type:'FUNKO POP!',name:'Gohan',description:'Edição especial',image:'assets/universe-dragon-ball.png',price:'R$ 189,90',placeholder:true}
+];
+const names={naruto:'Naruto',pokemon:'Pokémon','one-piece':'One Piece','dragon-ball':'Dragon Ball'};
+const params=new URLSearchParams(location.search);const universe=params.get('universo');const filtered=universe?products.filter(item=>item.universe===universe):products;const grid=document.getElementById('catalog-grid');const title=document.getElementById('universe-title');const count=document.getElementById('result-count');title.textContent=universe&&names[universe]?names[universe]:'todos os universos';count.textContent=filtered.length;document.querySelectorAll('.filter-tabs a').forEach(link=>{if((universe&&link.dataset.filter===universe)||(!universe&&!link.dataset.filter))link.classList.add('active')});grid.innerHTML=filtered.length?filtered.map(item=>`<article class="catalog-card"><div class="catalog-card-media ${item.placeholder?'logo-placeholder':''}"><img src="${item.image}" alt="${item.name}"></div><div class="catalog-card-body"><span>${item.type}</span><h2>${item.name}</h2><p>${item.description}</p>${item.price?`<strong>${item.price}</strong>`:'<strong class="consult">Consulte as opções disponíveis</strong>'}</div></article>`).join(''):'<div class="empty-catalog">Nenhum produto encontrado neste universo.</div>';

@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Loja de colecionáveis .NERD">
+  <title>.NERD | Colecionáveis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css.css">
+  <link rel="stylesheet" href="logo-fix.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Página inicial .NERD">
+      <img src="assets/logo.png" alt="Logo .NERD">
+    </a>
+
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav" aria-label="Navegação principal">
+      <a class="active" href="#inicio">Início</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="#categorias">Categorias</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-button" aria-label="Pesquisar" data-search><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="dot-grid" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">COLECIONÁVEIS PARA QUEM LEVA A PAIXÃO A SÉRIO</p>
+        <h1>O próximo destaque<br>da sua coleção<br><em>está aqui.</em></h1>
+        <p class="lead">TCG, action figures e colecionáveis selecionados para quem não quer apenas comprar — quer colecionar de verdade.</p>
+        <div class="hero-buttons">
+          <a class="button secondary" href="#categorias">Explorar categorias <span>›</span></a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Área reservada para imagens dos produtos">
+        <div class="showcase-frame">
+          <div class="showcase-inner">
+            <img src="assets/logo.png" alt=".NERD">
+          </div>
+        </div>
+        <div class="empty-product empty-left has-image">
+          <img src="assets/tag-9.png" alt="Carta Pikachu Pokémon TAG 9">
+        </div>
+        <div class="empty-product empty-right" aria-label="Espaço vazio para imagem do produto"></div>
+      </div>
+    </section>
+
+    <section class="featured" id="produtos">
+      <div class="section-heading">
+        <div><p class="eyebrow">☆ &nbsp; DESTAQUES</p><h2>Itens em destaque</h2></div>
+        <a href="produtos.html">Ver todos <span>›</span></a>
+      </div>
+      <div class="product-grid">
+        <article class="product-card" data-product="Cartas Pokémon" data-universe="pokemon"><span class="badge">NOVO</span><div class="product-image"><img src="assets/charmander.png" alt="Carta avulsa Charmander"></div><div class="product-info"><p>Para sua coleção</p><h3>Encontre sua próxima carta favorita</h3></div><span class="view-product" aria-hidden="true">›</span></article>
+        <article class="product-card" data-product="Son Vegeta" data-universe="dragon-ball" data-sku="PROD011"><span class="badge">LIMITADO</span><div class="product-image"><img class="figure-cutout" src="assets/action-figure-cutout.png" alt="Son Vegeta Dragon Ball Z"></div><div class="product-info"><p>Action Figure</p><h3>Son Vegeta<br>Dragon Ball Z • 33cm</h3><strong>R$ 135,00</strong></div><span class="view-product" aria-hidden="true">›</span></article>
+        <article class="product-card" data-product="Mega Charizard Y ex" data-universe="pokemon" data-sku="PROD025"><span class="badge">RARO</span><div class="product-image"><img src="assets/prod025-mega-charizard-y-ex-030.png" alt="Carta Mega Charizard Y ex"></div><div class="product-info"><p>Carta Pokémon</p><h3>Mega Charizard Y ex<br>030/∞</h3><strong>R$ 30,00</strong></div><span class="view-product" aria-hidden="true">›</span></article>
+        <article class="product-card" data-product="Squirtle" data-universe="pokemon" data-sku="PROD017"><span class="badge">EXCLUSIVO</span><div class="product-image squirtle-image"><img src="assets/funko-squirtle.png" alt="Funko Pop Pokémon Squirtle número 504"></div><div class="product-info"><p>Pop Style</p><h3>Squirtle<br>Edição 504</h3><strong>R$ 45,00</strong></div><span class="view-product" aria-hidden="true">›</span></article>
+      </div>
+    </section>
+
+    <section class="placeholder-section categories-section" id="categorias">
+      <p class="eyebrow">CATEGORIAS</p>
+      <h2>Encontre seu universo</h2>
+      <div class="universe-marquee" aria-label="Universos disponíveis: Naruto, Pokémon, One Piece, Dragon Ball e Marvel">
+        <div class="universe-track">
+          <a class="universe-logo" href="produtos.html?universo=naruto"><img src="assets/universe-naruto.png" alt="Ver produtos de Naruto"></a>
+          <a class="universe-logo" href="produtos.html?universo=pokemon"><img src="assets/universe-pokemon.png" alt="Ver produtos de Pokémon"></a>
+          <a class="universe-logo" href="produtos.html?universo=one-piece"><img src="assets/universe-one-piece.png" alt="Ver produtos de One Piece"></a>
+          <a class="universe-logo" href="produtos.html?universo=dragon-ball"><img src="assets/universe-dragon-ball.png" alt="Ver produtos de Dragon Ball Z"></a>
+          <a class="universe-logo marvel-logo" href="produtos.html?universo=marvel"><img src="assets/universe-marvel.png" alt="Ver produtos da Marvel"></a>
+          <a class="universe-logo" href="produtos.html?universo=naruto" aria-hidden="true" tabindex="-1"><img src="assets/universe-naruto.png" alt=""></a>
+          <a class="universe-logo" href="produtos.html?universo=pokemon" aria-hidden="true" tabindex="-1"><img src="assets/universe-pokemon.png" alt=""></a>
+          <a class="universe-logo" href="produtos.html?universo=one-piece" aria-hidden="true" tabindex="-1"><img src="assets/universe-one-piece.png" alt=""></a>
+          <a class="universe-logo" href="produtos.html?universo=dragon-ball" aria-hidden="true" tabindex="-1"><img src="assets/universe-dragon-ball.png" alt=""></a>
+          <a class="universe-logo marvel-logo" href="produtos.html?universo=marvel" aria-hidden="true" tabindex="-1"><img src="assets/universe-marvel.png" alt=""></a>
+        </div>
+      </div>
+    </section>
+    <section class="nerd-story" id="sobre">
+      <div class="nerd-story-copy">
+        <p class="eyebrow">CURADORIA .NERD</p>
+        <h2>Sua estante não precisa<br>de mais do mesmo.<br><em>Precisa da próxima história.</em></h2>
+        <p class="nerd-story-lead">Da carta que fecha a página do fichário à figure que vira o centro da estante: aqui cada peça entra porque tem presença.</p>
+        <p class="nerd-story-text">Nosso catálogo reúne TCG, action figures, Pop Style e estátuas de universos que a gente acompanha de verdade. Você encontra a peça, confere os detalhes e fala direto com quem também coleciona.</p>
+        <div class="nerd-story-tags" aria-label="Tipos de colecionáveis disponíveis"><span>TCG PT-BR &amp; EN</span><span>Action Figures</span><span>Pop Style</span></div>
+        <a class="nerd-story-cta" href="produtos.html">Encontrar minha próxima peça <b>›</b></a>
+      </div>
+      <div class="collector-display" aria-label="Seleção de produtos Nerds Colecionáveis">
+        <div class="display-header"><span>.NERD DISPLAY</span><small>SELEÇÃO 01</small></div>
+        <div class="display-stage">
+          <span class="display-halo" aria-hidden="true"></span>
+          <img class="display-item display-card" src="assets/prod012-luffy-01.png" alt="Action figure Monkey D. Luffy de One Piece">
+          <img class="display-item display-figure" src="assets/prod002-naruto-dark.png" alt="Action figure Naruto com suporte">
+          <img class="display-item display-pop" src="assets/prod016-pikachu-box-dark-v3.png" alt="Pop Style Pikachu edição 353">
+          <span class="display-stamp">ESCOLHIDO<br>POR FÃS</span>
+        </div>
+        <div class="display-footer"><span>Cartas que completam</span><i></i><span>Figures que destacam</span><i></i><span>Peças que contam histórias</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-glow" aria-hidden="true"></div>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a href="#inicio" aria-label="Voltar ao início">
+          <img src="assets/logo.png" alt="Logo Nerds Colecionáveis">
+        </a>
+        <div>
+          <strong>Nerds Colecionáveis</strong>
+          <p>Peças escolhidas por fãs, para quem leva a coleção a sério.</p>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <span>Navegação</span>
+        <a href="#inicio">Início</a>
+        <a href="#produtos">Destaques</a>
+        <a href="#categorias">Universos</a>
+        <a href="#sobre">Sobre</a>
+      </div>
+
+      <div class="footer-column">
+        <span>Catálogo</span>
+        <a href="produtos.html?universo=pokemon">Pokémon</a>
+        <a href="produtos.html?universo=dragon-ball">Dragon Ball</a>
+        <a href="produtos.html?universo=one-piece">One Piece</a>
+        <a href="produtos.html?universo=marvel">Marvel</a>
+      </div>
+
+      <div class="footer-contact">
+        <span>Atendimento</span>
+        <p>Encontrou uma peça para sua coleção? Fale diretamente com a gente.</p>
+        <a class="footer-whatsapp" href="https://wa.me/5511941561672" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L0 24l6.5-1.7a11.8 11.8 0 0 0 5.6 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.5-8.4Zm-8.3 18.2h-.1c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.5 4.7Zm5.4-7.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-1.8-.9-3-1.6-4.2-3.6-.3-.5.3-.5.9-1.6.1-.2.1-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.9 5.2.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.2-.1-.4-.2-.7-.3Z"/></svg>
+          Chamar no WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nerds Colecionáveis. Todos os direitos reservados.</p>
+      <p>Catálogo de produtos colecionáveis.</p>
+    </div>
+  </footer>
+
+  <div class="search-panel" aria-hidden="true"><form><input type="search" placeholder="O que você está procurando?" aria-label="Buscar produtos"><button>Buscar</button></form></div>
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="js.js"></script>
+  <script src="catalog-links.js"></script>
+</body>
+</html>

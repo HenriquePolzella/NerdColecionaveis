@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos | .NERD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css.css">
+  <link rel="stylesheet" href="produtos.css">
+  <link rel="stylesheet" href="catalog-fix.css">
+</head>
+<body class="catalog-page">
+  <svg class="catalog-image-filters" aria-hidden="true">
+    <filter id="remove-light-background" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="
+        1 0 0 0 0
+        0 1 0 0 0
+        0 0 1 0 0
+        -2 -2 -2 0 5.82" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="4" intercept="0" />
+      </feComponentTransfer>
+    </filter>
+  </svg>
+  <header class="site-header catalog-header">
+    <a class="brand" href="index.html" aria-label="Voltar para o início"><img src="assets/logo.png" alt="Logo .NERD"></a>
+    <nav class="nav catalog-nav" aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a class="active" href="produtos.html">Produtos</a>
+      <a href="index.html#categorias">Categorias</a>
+      <a href="index.html#sobre">Sobre</a>
+    </nav>
+    <a class="back-home" href="index.html">← Voltar</a>
+  </header>
+
+  <main class="catalog-main">
+    <section class="catalog-intro">
+      <h1>Produtos de <em id="universe-title">todos os universos</em></h1>
+      <p id="catalog-description">Explore nossa seleção de colecionáveis.</p>
+    </section>
+
+    <nav class="filter-tabs" aria-label="Filtrar por universo">
+      <a href="produtos.html">Todos</a>
+      <a href="produtos.html?universo=naruto" data-filter="naruto">Naruto</a>
+      <a href="produtos.html?universo=pokemon" data-filter="pokemon">Pokémon</a>
+      <a href="produtos.html?universo=one-piece" data-filter="one-piece">One Piece</a>
+      <a href="produtos.html?universo=dragon-ball" data-filter="dragon-ball">Dragon Ball</a>
+      <a href="produtos.html?universo=marvel" data-filter="marvel">Marvel</a>
+      <a href="produtos.html?universo=dc" data-filter="dc">DC</a>
+      <a href="produtos.html?universo=games" data-filter="games">Games</a>
+    </nav>
+
+    <section class="catalog-results">
+      <div class="catalog-results-toolbar">
+        <div class="catalog-count"><span id="result-count">0</span> itens encontrados</div>
+        <label class="catalog-sort" for="product-sort">
+          <span>Ordenar por</span>
+          <select id="product-sort" aria-label="Ordenar produtos">
+            <option value="default">Ordenação padrão</option>
+            <option value="name-asc">Nome: A–Z</option>
+            <option value="name-desc">Nome: Z–A</option>
+            <option value="price-asc">Preço: menor–maior</option>
+            <option value="price-desc">Preço: maior–menor</option>
+          </select>
+        </label>
+      </div>
+      <div class="catalog-grid" id="catalog-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-glow" aria-hidden="true"></div>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a href="index.html" aria-label="Voltar ao início">
+          <img src="assets/logo.png" alt="Logo Nerds Colecionáveis">
+        </a>
+        <div>
+          <strong>Nerds Colecionáveis</strong>
+          <p>Peças escolhidas por fãs, para quem leva a coleção a sério.</p>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <span>Navegação</span>
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="index.html#categorias">Universos</a>
+        <a href="index.html#sobre">Sobre</a>
+      </div>
+
+      <div class="footer-column">
+        <span>Catálogo</span>
+        <a href="produtos.html?universo=pokemon">Pokémon</a>
+        <a href="produtos.html?universo=dragon-ball">Dragon Ball</a>
+        <a href="produtos.html?universo=one-piece">One Piece</a>
+        <a href="produtos.html?universo=marvel">Marvel</a>
+      </div>
+
+      <div class="footer-contact">
+        <span>Atendimento</span>
+        <p>Encontrou uma peça para sua coleção? Fale diretamente com a gente.</p>
+        <a class="footer-whatsapp" href="https://wa.me/5511941561672" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L0 24l6.5-1.7a11.8 11.8 0 0 0 5.6 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.5-8.4Zm-8.3 18.2h-.1c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.5 4.7Zm5.4-7.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-1.8-.9-3-1.6-4.2-3.6-.3-.5.3-.5.9-1.6.1-.2.1-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.9 5.2.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.2-.1-.4-.2-.7-.3Z"/></svg>
+          Chamar no WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nerds Colecionáveis. Todos os direitos reservados.</p>
+      <p>Catálogo de produtos colecionáveis.</p>
+    </div>
+  </footer>
+
+  <script src="produtos-v2.js"></script>
+</body>
+</html>
